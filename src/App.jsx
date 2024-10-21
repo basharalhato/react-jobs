@@ -62,8 +62,8 @@ const App = () => {
           loader={jobLoader}
         />
         <Route path='*' element={<NotFoundPage />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
 
   return <RouterProvider router={router} />;

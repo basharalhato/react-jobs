@@ -11,7 +11,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
   const [salary, setSalary] = useState(job.salary);
   const [companyName, setCompanyName] = useState(job.company.name);
   const [companyDescription, setCompanyDescription] = useState(
-    job.company.description
+    job.company.description,
   );
   const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
   const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
@@ -56,8 +56,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='mb-4'>
               <label
                 htmlFor='type'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Job Type
               </label>
               <select
@@ -66,8 +65,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 className='border rounded w-full py-2 px-3'
                 required
                 value={type}
-                onChange={(e) => setType(e.target.value)}
-              >
+                onChange={(e) => setType(e.target.value)}>
                 <option value='Full-Time'>Full-Time</option>
                 <option value='Part-Time'>Part-Time</option>
                 <option value='Remote'>Remote</option>
@@ -93,8 +91,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='mb-4'>
               <label
                 htmlFor='description'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Description
               </label>
               <textarea
@@ -104,15 +101,13 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 rows='4'
                 placeholder='Add any job duties, expectations, requirements, etc'
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></textarea>
+                onChange={(e) => setDescription(e.target.value)}></textarea>
             </div>
 
             <div className='mb-4'>
               <label
                 htmlFor='type'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Salary
               </label>
               <select
@@ -121,8 +116,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 className='border rounded w-full py-2 px-3'
                 required
                 value={salary}
-                onChange={(e) => setSalary(e.target.value)}
-              >
+                onChange={(e) => setSalary(e.target.value)}>
                 <option value='Under $50K'>Under $50K</option>
                 <option value='$50K - 60K'>$50K - $60K</option>
                 <option value='$60K - 70K'>$60K - $70K</option>
@@ -158,8 +152,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='mb-4'>
               <label
                 htmlFor='company'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Company Name
               </label>
               <input
@@ -176,8 +169,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='mb-4'>
               <label
                 htmlFor='company_description'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Company Description
               </label>
               <textarea
@@ -187,15 +179,15 @@ const EditJobPage = ({ updateJobSubmit }) => {
                 rows='4'
                 placeholder='What does your company do?'
                 value={companyDescription}
-                onChange={(e) => setCompanyDescription(e.target.value)}
-              ></textarea>
+                onChange={(e) =>
+                  setCompanyDescription(e.target.value)
+                }></textarea>
             </div>
 
             <div className='mb-4'>
               <label
                 htmlFor='contact_email'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Contact Email
               </label>
               <input
@@ -212,8 +204,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div className='mb-4'>
               <label
                 htmlFor='contact_phone'
-                className='block text-gray-700 font-bold mb-2'
-              >
+                className='block text-gray-700 font-bold mb-2'>
                 Contact Phone
               </label>
               <input
@@ -230,8 +221,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
             <div>
               <button
                 className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline'
-                type='submit'
-              >
+                type='submit'>
                 Update Job
               </button>
             </div>
